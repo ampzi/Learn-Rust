@@ -1,6 +1,12 @@
 [package]
-name = "Rust"
+name = "rust-tiny-project"
 version = "0.1.0"
 edition = "2024"
+publish = false
+# two binaries now: keep plain `cargo run` pointing at the lessons
+default-run = "rust-tiny-project"
 
 [dependencies]
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+dotenvy = "0.15"
+reqwest = "0.13.5"
